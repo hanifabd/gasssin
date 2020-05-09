@@ -14,6 +14,21 @@ function closediv(divpart) {
     return true;
 }
 
+function pagechange(frompage, topage) {
+    var page=document.getElementById('page_'+frompage);
+    if (!page) return false;
+    page.style.visibility='hidden';
+    page.style.display='none';
+  
+    page=document.getElementById('page_'+topage);
+    if (!page) return false;
+    page.style.display='block';
+    page.style.visibility='visible';
+  
+    return true;
+}
+
+
 function animateCSS(element, animationName, callback) {
     const node = document.querySelector(element)
     node.classList.add('animated', animationName)

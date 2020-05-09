@@ -22,11 +22,28 @@
     <title>Gasssin</title>
 </head>
 <body>
-    <div id="login" class="row row-fluid bgbrown">
-        <div class="navpd w-100">
+    <div class="row row-fluid bgbrown">
+        <div id="page_1" class="navpd w-100" style="display: block; visibility: visible;">
             <nav class="navbar w-100 fadeindown">
-                <a class="navbar-brand" href="#"><img class="pointer-cursor icon-chat" src="img/brand pojok.png" alt=""></a>
-                <span class="pointer-cursor"><img src="img/menu-br.png" alt=""></span>
+                <div class="navbar-brand">
+                    <span class="navbar-brand pointer-cursor" onclick="pagechange(1,2)"><img src="img/menu-br.png" alt=""></span>
+                    <a class="navbar-brand" href="#">
+                        <img class="pointer-cursor icon-chat" src="img/brand pojok.png" alt="">
+                    </a>
+                </div>
+                <!-- belum masuk -->
+                <div style="display: none; visibility: hidden">
+                    <a class="text-hv fs20 fcwhitesmoke p-2 text-decoration-none" href="login.html">Masuk</a>
+                    <span class="dst-signin pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="register.html">Daftar</a></span>
+                </div>
+                <!-- belum masuk -->
+                <!-- sudah masuk -->
+                <div class="pointer-cursor" style="display: inline; visibility: visible">
+                    <span class="dst-signin fclbrown">Welcome, </span>
+                    <span class="dst-signin fcwhitesmoke mr-1">Hanif Abdillah</span>
+                    <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
+                </div>
+                <!-- sudah masuk -->
             </nav>  
             <div class="w-100">
                 <div class="w-100 fadeindown">
@@ -208,6 +225,37 @@
                 </div>
                 <!-- showcase gallery -->
             </div>
+        </div>
+
+        <div id="page_2" class="navpd w-100" style="display: none; visibility: hidden;">
+            <nav class="navbar w-100">
+                <div class="navbar-brand">
+                    <span class="navbar-brand pointer-cursor" onclick="pagechange(2,1)"><img src="img/menu-br.png" alt=""></span>
+                    <a class="navbar-brand" href="#">
+                        <img class="pointer-cursor icon-chat" src="img/brand pojok.png" alt="">
+                    </a>
+                </div>
+                <!-- belum masuk -->
+                <div style="display: none; visibility: hidden">
+                    <a class="text-hv fs20 fcwhitesmoke p-2 text-decoration-none" href="login.html">Masuk</a>
+                    <span class="dst-signin pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="register.html">Daftar</a></span>
+                </div>
+                <!-- belum masuk -->
+                <!-- sudah masuk -->
+                <div class="pointer-cursor" style="display: inline; visibility: visible">
+                    <span class="dst-signin fclbrown">Welcome, </span>
+                    <span class="dst-signin fcwhitesmoke mr-1">Hanif Abdillah</span>
+                    <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
+                </div>
+                <!-- sudah masuk -->
+            </nav>  
+            <center>
+                <div class="pd54">
+                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="">Shots</a></div>
+                    <div class="slideinright"><a class="fs60 fcwhitesmoke" href="">Mahasiswa</a></div>
+                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="">Tentang</a></div>
+                </div>
+            </center>
         </div>
     </div>
 </body>

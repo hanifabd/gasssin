@@ -16,6 +16,11 @@
     font-family: Pajarakan Regular;
 }
 
+.dst-signin {
+    display: inline;
+    visibility: visible;
+}
+
 .dst {
     display: block;
     visibility: visible;
@@ -49,6 +54,10 @@ body::-webkit-scrollbar {
 
 .fs48{
     font-size: 48px;
+}
+
+.fs36 {
+    font-size: 36px;
 }
 
 .fs20{
@@ -314,6 +323,17 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
+.btn-hv:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    color: whitesmoke;
+    background-color: rgb(206, 145, 22);
+    transition: 1s;
+}
+
+.text-hv:hover {
+    color: whitesmoke;
+}
+
 .button-opt:hover{
     border: 3px solid #EAB242;
     transition: 1s;
@@ -451,6 +471,11 @@ body::-webkit-scrollbar {
 .navpd {
     padding: 24px;
 }
+
+.img_image_profile {
+    width: 36px;
+    height: 36px;
+}
 /* navigation */
 
 /* footer */
@@ -466,6 +491,11 @@ body::-webkit-scrollbar {
 /* cursor */
 
 @media only screen and (max-width: 800px) {
+    .dst-signin {
+        display: none;
+        visibility: hidden;
+    }
+
     .dst {
         display: none;
         visibility: hidden;

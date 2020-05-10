@@ -27,3 +27,20 @@ function showhide(buka, tutup) {
         
     return true;
 }
+
+var userflag = 0;
+
+function showuserinfo() {
+    var page = document.getElementById('userinfo');
+    if(userflag == 0) {
+        userflag = 1;
+        if (!page) return false;
+        page.style.display='block';
+        page.style.visibility='visible';
+    } else if(userflag == 1) {
+        userflag = 0;
+        if (!page) return false;
+        page.style.display='none';
+        page.style.visibility='hidden';
+    }
+}

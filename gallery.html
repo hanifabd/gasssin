@@ -18,6 +18,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/filter.js"></script>
     <script src="js/trigger.js"></script>
+    <script>
+        // menampilkan 4 grid-item dulu
+        // kemudian setelah klik div dengan id="loadmore" akan menampilkan 4 item lainnya
+        $(function () {
+            $(".grid-item").slice(0, 4).show();
+            $("#loadmore").on('click', function (e) {
+                e.preventDefault();
+                $(".grid-item:hidden").slice(0, 4).show();
+            });
+        });
+    </script>
     <!-- bootstrap js -->
     <title>Gasssin</title>
 </head>
@@ -38,13 +49,33 @@
                 </div>
                 <!-- belum masuk -->
                 <!-- sudah masuk -->
-                <div class="pointer-cursor" style="display: inline; visibility: visible">
+                <div id="user-profile" class="pointer-cursor fadeindown" style="display: inline; visibility: visible" onclick="showuserinfo();">
                     <span class="dst-signin fclbrown">Welcome, </span>
                     <span class="dst-signin fcwhitesmoke mr-1">Hanif Abdillah</span>
                     <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
                 </div>
                 <!-- sudah masuk -->
             </nav>  
+            <div id="userinfo" class="snav row row-fluid infogroup fadeinfast" style="display: none; visibility: hidden">
+                <div class="position-absolute w-100">
+                    <div class="col">
+                        <div class="w-100 bglbrown mt-12 pd16 rounded bx-shadow-lg">
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Profil Anda</a></div>
+                            <hr>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Profil</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Portfolio</a></div>
+                            <hr>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="login.html">Keluar</a></div>
+                            <hr>
+                            <center>
+                            <div>
+                                <span class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bgbrown rounded text-decoration-none" href="#">Upload</a></span>
+                            </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>   
+            </div>
             <div class="w-100">
                 <div class="w-100 fadeindown">
                     <div class="mt-48">
@@ -222,38 +253,77 @@
                         </div>
                         <!-- one show -->
                     </div>
+                    <!-- load more -->
+                    <center>
+                        <div class="mt-48 mb-48 fadeindown">
+                            <a id="loadmore" class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="#">Lihat Lainnya</a></span>
+                        </div>
+                    </center>
+                    <!-- load more -->
                 </div>
                 <!-- showcase gallery -->
+                <hr>
+                <!-- footer -->
+                <footer class="fadein">
+                    <div class="grid-container-footer">
+                        <div class="grid-item-footer">
+                            <div class="fs48 fclbrown etnic-san">gasssin</div>
+                            <div class="fclbrown"><strong>Tunjukan karyamu dan Buat dirimu bersinar</strong></div>
+                            <div class="fs16 fclbrown">Apa yang sedang kamu kerjakan? Gasssin adalah sebuah komunitas untuk mahasiswa berbagi pekerjaan, proses, dan projek.</div>
+                        </div>
+                        <div class="grid-item-footer">
+                            <div class="row p-2">
+                                <div><a class="text-hv fclbrown text-decoration-none mb-12" href="gallery.html">Gasssin.</a></div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="col">
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">About</a></div>
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">Help</a></div>
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">Contact</a></div>
+                                </div>
+                                <div class="col">
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">Terms</a></div>
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">Guidelines</a></div>
+                                    <div><a class="fs14 text-hv fclbrown text-decoration-none" href="#">Privacy</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-footer">
+                            <div class="row p-2">
+                                <div class="fclbrown"><a class="text-hv text-decoration-none mb-12">Shots Statistik.</a></div>
+                            </div>
+                            <div class=" row my-auto">
+                                <div class="m-2 p-2">
+                                    <img class="footer-img" src="img/PRODUCT LOGO.png" alt="">
+                                </div>
+                                <div class="m-2 p-2 ml12">
+                                    <span class="fs36 etnic-san fclbrown">11,350,840</span><br>
+                                    <span class="fclbrown">gasssins shoted</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mt-24 w-100 fclbrown">
+                        <center>© 2020 Gasssin. All rights reserved. | Made with ♥ remotely from Team Horeey</center>
+                    </div>
+                </footer>
+                <!-- footer -->
             </div>
         </div>
 
         <div id="page_2" class="navpd w-100" style="display: none; visibility: hidden;">
             <nav class="navbar w-100">
                 <div class="navbar-brand">
-                    <span class="navbar-brand pointer-cursor" onclick="pagechange(2,1)"><img src="img/menu-br.png" alt=""></span>
-                    <a class="navbar-brand" href="#">
-                        <img class="pointer-cursor icon-chat" src="img/brand pojok.png" alt="">
-                    </a>
+                    <span class="navbar-brand pointer-cursor" onclick="pagechange(2,1)"><img src="img/imgclose.png" alt=""></span>
                 </div>
-                <!-- belum masuk -->
-                <div style="display: none; visibility: hidden">
-                    <a class="text-hv fs20 fcwhitesmoke p-2 text-decoration-none" href="login.html">Masuk</a>
-                    <span class="dst-signin pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="register.html">Daftar</a></span>
-                </div>
-                <!-- belum masuk -->
-                <!-- sudah masuk -->
-                <div class="pointer-cursor" style="display: inline; visibility: visible">
-                    <span class="dst-signin fclbrown">Welcome, </span>
-                    <span class="dst-signin fcwhitesmoke mr-1">Hanif Abdillah</span>
-                    <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
-                </div>
-                <!-- sudah masuk -->
             </nav>  
             <center>
                 <div class="pd54">
-                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="">Shots</a></div>
-                    <div class="slideinright"><a class="fs60 fcwhitesmoke" href="">Mahasiswa</a></div>
-                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="">Tentang</a></div>
+                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="#">Shots</a></div>
+                    <div class="slideinright"><a class="fs60 fcwhitesmoke" href="#">Top Creator</a></div>
+                    <div class="slideinleft"><a class="fs60 fcwhitesmoke" href="#">Tentang</a></div>
+                    <div class="slideinright"><a class="fs60 fcwhitesmoke" href="#">Kontak</a></div>
                 </div>
             </center>
         </div>

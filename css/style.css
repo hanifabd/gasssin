@@ -47,6 +47,23 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 
+/* profile user */
+.infogroup{
+    position: relative;
+    width: 200px;
+}
+
+.snav {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+}
+
+.profile-opt:hover {
+    color: #5B3A00;
+}
+/* profile user */
+
 /* font-size */
 .fs60{
     font-size: 60px;
@@ -62,6 +79,14 @@ body::-webkit-scrollbar {
 
 .fs20{
     font-size: 20px;
+}
+
+.fs16{
+    font-size: 16px;
+}
+
+.fs14{
+    font-size: 14px;
 }
 
 .fs12{
@@ -176,6 +201,10 @@ body::-webkit-scrollbar {
     margin-bottom: 20px;
 }
 
+.mb-48{
+    margin-bottom: 48px;
+}
+
 .mb-12{
     margin-bottom: 12px;
 }
@@ -190,8 +219,20 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-columns: repeat(4, 330px);
 }
+
 .grid-item {
+    display: none;
     background-color: white;
+    margin: 8px;
+    font-size: 18px;    
+}
+
+.grid-container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+}
+
+.grid-item-footer {
     margin: 8px;
     font-size: 18px;    
 }
@@ -384,6 +425,10 @@ body::-webkit-scrollbar {
     max-width: 580px;
 }
 
+.footer-img {
+    max-height: 85px;
+}
+
 .icon-chat{
     max-width: 100px;
 }
@@ -407,6 +452,10 @@ body::-webkit-scrollbar {
 .fadeup {
     animation-name: fadeInUp;
     transition: all 2s;    
+}
+
+.fadeinfast {
+    animation: fadeIn 0.5s ease; 
 }
 
 .fadein{
@@ -520,6 +569,10 @@ body::-webkit-scrollbar {
     .grid-container{
         grid-template-columns: repeat(1, auto);
     }
+
+    .grid-container-footer {
+        grid-template-columns: repeat(1, auto);
+    }
     
     .navpd {
         padding: 16px;
@@ -531,5 +584,9 @@ body::-webkit-scrollbar {
 
     .thumb_img {
         width: 100%;
+    }
+
+    .pd54 {
+        padding: 16px;
     }
 }

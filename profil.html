@@ -30,7 +30,7 @@
         });
     </script>
     <!-- bootstrap js -->
-    <title>Gasssin - Temukan Karya dan Creator Mahasiswa terbaik</title>
+    <title>Hanif Yuli Abdillah P | Gasssin</title>
 </head>
 <body>
     <div class="row row-fluid bgbrown">
@@ -43,13 +43,13 @@
                     </a>
                 </div>
                 <!-- belum masuk -->
-                <div id="not-log" style="display: inline; visibility: visible">
+                <div style="display: none; visibility: hidden">
                     <a class="text-hv fs20 fcwhitesmoke p-2 text-decoration-none" href="login.html">Masuk</a>
                     <span class="dst-signin pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="register.html">Daftar</a></span>
                 </div>
                 <!-- belum masuk -->
                 <!-- sudah masuk -->
-                <div id="user-profile" class="pointer-cursor fadeindown" style="display: none; visibility: hidden" onclick="showuserinfo();">
+                <div id="user-profile" class="pointer-cursor fadeindown" style="display: inline; visibility: visible" onclick="showuserinfo();">
                     <span class="dst-signin fclbrown">Welcome, </span>
                     <span class="dst-signin fcwhitesmoke mr-1">hanifabd</span>
                     <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
@@ -60,7 +60,7 @@
                 <div class="position-absolute w-100">
                     <div class="col">
                         <div class="w-100 bglbrown mt-12 pd16 rounded bx-shadow-lg">
-                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="profil.html">Profil Anda</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Profil Anda</a></div>
                             <hr>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Profil</a></div>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Portfolio</a></div>
@@ -77,18 +77,22 @@
                 </div>   
             </div>
             <div class="w-100">
-                <div class="w-100 fadeindown">
+                <div class="w-100 fadeindown mb-20">
                     <div class="mt-48">
                         <center>
                             <div>
-                                <span class="fcwhitesmoke fs48 etnic-san">gasssin shots</span>
+                                <span class="rounded-circle mr-2"><img class="img_image_profile_user rounded-circle" src="img/p1.jpg" alt=""></span>
                             </div>
                             <div class="mt-12">
-                                <span class="fclbrown">Temukan Karya Terbaik dari Mahasiswa Terbaik</span>
+                                <span class="fcwhitesmoke fs36 etnic-san">Hanif Yuli Abdillah P</span>
+                            </div>
+                            <div class="prof-desc mt-12">
+                                <span class="fclbrown">Currently Addicted to Front End | Interaction Design #UX #UI #interactiondesign #frontend 🚑 Interaction Design | Front-End addicted</span>
                             </div>
                         </center>
                     </div>
                 </div>
+                <hr>
                 <!-- filter navigation -->
                 <div class="w-100 mt-24 fadeindown">
                     <div class="py-2">
@@ -107,7 +111,7 @@
                 <div id="div_1" class="w-100 mt-12 fadein" style="visibility: hidden; display: none;">
                     <form class="navbar-form pull-left form-search">
                         <div class="input-append">
-                          <input class="stform stform-search bgwhitesmoke pd8" type="text" name="" id="" placeholder="Temukan karya atau creator...">
+                          <input class="stform stform-search bgwhitesmoke pd8" type="text" name="" id="" placeholder="Temukan karyamu...">
                           <button class="btn-search">Search</button>
                         </div>
                     </form>

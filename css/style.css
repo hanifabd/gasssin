@@ -12,6 +12,13 @@
     font-family: Product Regular;
 }
 
+.active {
+    color: #5B3A00!important;
+    background-color: #EAB242;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 .etnic-san{
     font-family: Pajarakan Regular;
 }
@@ -62,6 +69,24 @@ body::-webkit-scrollbar {
 .profile-opt:hover {
     color: #5B3A00;
 }
+
+.img_image_profile_user {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.img_image_profile_user_edit {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.prof-desc{
+    width: 50%;
+}
 /* profile user */
 
 /* font-size */
@@ -75,6 +100,10 @@ body::-webkit-scrollbar {
 
 .fs36 {
     font-size: 36px;
+}
+
+.fs24 {
+    font-size: 24px;
 }
 
 .fs20{
@@ -209,6 +238,10 @@ body::-webkit-scrollbar {
     margin-bottom: 12px;
 }
 
+.mb8 {
+    margin-bottom: 8px;
+}
+
 .ml12{
     margin-left: 12px;
 }
@@ -233,6 +266,16 @@ body::-webkit-scrollbar {
 }
 
 .grid-item-footer {
+    margin: 8px;
+    font-size: 18px;    
+}
+
+.grid-container-edit-profile {
+    display: grid;
+    grid-template-columns: 35% 65%
+}
+
+.grid-item-edit-profile {
     margin: 8px;
     font-size: 18px;    
 }
@@ -588,5 +631,9 @@ body::-webkit-scrollbar {
 
     .pd54 {
         padding: 16px;
+    }
+
+    .prof-desc{
+        width: 100%;
     }
 }

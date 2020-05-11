@@ -616,6 +616,10 @@ body::-webkit-scrollbar {
     .grid-container-footer {
         grid-template-columns: repeat(1, auto);
     }
+
+    .grid-container-edit-profile {
+        grid-template-columns: repeat(1, auto);
+    }
     
     .navpd {
         padding: 16px;

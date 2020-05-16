@@ -526,6 +526,10 @@ body::-webkit-scrollbar {
     animation: fadeIn 2s ease; 
 }
 
+.fadeinup{
+    animation: fadeInUp 2s ease; 
+}
+
 .fadeindown {
     animation: fadeInDown 2s ease; 
 }

@@ -8,6 +8,19 @@
     src: url(../fonts/Product\ Sans\ Regular.ttf);
 }
 
+.iconify {
+    transition: 1s;
+    content: url('https://api.iconify.design/octicon-cloud-upload.svg?height=16');
+    width: 100px;
+    vertical-align: -0.125em;
+}
+
+.dropzone:hover .iconify{
+    content: url('https://api.iconify.design/octicon-cloud-upload.svg?color=%23EAB242&height=16');
+    transition: 1s;
+    vertical-align: -0.125em;
+}
+
 *{
     font-family: Product Regular;
 }
@@ -126,7 +139,7 @@ body::-webkit-scrollbar {
 
 /* font-color */
 .fclgrey{
-    color: lightgray;
+    color: #d3d3d3;
 }
 
 .fcgrey{
@@ -153,6 +166,10 @@ body::-webkit-scrollbar {
 /* background-color */
 .bglbrown{
     background-color: #EAB242;
+}
+
+.bglgrey{
+    background-color: rgb(230, 230, 230);
 }
 
 .bgbrown{
@@ -188,6 +205,10 @@ body::-webkit-scrollbar {
 
 .pd8{
     padding: 8px;
+}
+
+.pb16{
+    padding-bottom: 16px;
 }
 
 .pb72{
@@ -571,8 +592,10 @@ body::-webkit-scrollbar {
 /* navigation */
 
 /* footer */
-.footer{
+.footer-fixed{
     height: 60px;
+    position: fixed;
+    bottom: 0;
 }
 /* footer */
 
@@ -581,6 +604,24 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 /* cursor */
+
+/* drop image */
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropzone-detil {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* drop image */
+
 
 @media only screen and (max-width: 800px) {
     .dst-signin {

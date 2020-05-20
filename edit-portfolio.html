@@ -30,7 +30,7 @@
         });
     </script>
     <!-- bootstrap js -->
-    <title>Gasssin - Temukan Karya dan Creator Mahasiswa terbaik</title>
+    <title>Atur Karya | Gasssin</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 </head>
 <body>
@@ -44,7 +44,7 @@
                     </a>
                 </div>
                 <!-- belum masuk -->
-                <div id="not-log" style="display: none; visibility: hidden">
+                <div style="display: none; visibility: hidden">
                     <a class="text-hv fs20 fcwhitesmoke p-2 text-decoration-none" href="login.html">Masuk</a>
                     <span class="dst-signin pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="register.html">Daftar</a></span>
                 </div>
@@ -78,14 +78,11 @@
                 </div>   
             </div>
             <div class="w-100">
-                <div class="w-100 fadeindown">
+                <div class="w-100 fadeindown mb-20">
                     <div class="mt-48">
                         <center>
-                            <div>
-                                <span class="fcwhitesmoke fs48 etnic-san">gasssin shots</span>
-                            </div>
                             <div class="mt-12">
-                                <span class="fclbrown">Temukan Karya Terbaik dari Mahasiswa Terbaik</span>
+                                <span class="fcwhitesmoke fs36 etnic-san">Atur Karya Milikmu</span>
                             </div>
                         </center>
                     </div>
@@ -108,7 +105,7 @@
                 <div id="div_1" class="w-100 mt-12 fadein" style="visibility: hidden; display: none;">
                     <form class="navbar-form pull-left form-search">
                         <div class="input-append">
-                          <input class="stform stform-search bgwhitesmoke pd8" type="text" name="" id="" placeholder="Temukan karya atau creator...">
+                          <input class="stform stform-search bgwhitesmoke pd8" type="text" name="" id="" placeholder="Temukan karyamu...">
                           <button class="btn-search">Search</button>
                         </div>
                     </form>
@@ -135,13 +132,12 @@
                                     <div class="mb-12"><span class="fcbrown"><strong>Platform</strong></span></div>
                                     <div>
                                         <select class="filter-select pd8 rounded text-bold" name="" id="">
-                                            <option value="1" disabled selected>Platform</option>
-                                            <option value="2">Website</option>
-                                            <option value="3">PWA</option>
-                                            <option value="4">Android</option>
-                                            <option value="5">Ios</option>
-                                            <option value="6">Desktop</option>
-                                            <option value="7">X-Platform</option>
+                                            <option value="" disabled selected>Platform</option>
+                                            <option value="">Website</option>
+                                            <option value="">PWA</option>
+                                            <option value="">Android</option>
+                                            <option value="">Ios</option>
+                                            <option value="">Desktop</option>
                                         </select>
                                     </div>
                                 </div>
@@ -168,24 +164,9 @@
                                     <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
                                     <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
                                 </span>
-                            </div>
-                        </div>
-                        <!-- one show -->
-
-                        <!-- one show -->
-                        <div class="grid-item bx-shadow-lg fadein">
-                            <div class="thumbnail_wrappper pointer-cursor">
-                                <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
-                                </div>
-                                <div class="thumb_title">
-                                    <span class="fcwhitesmoke">Master Cooking</span>
-                                </div>
-                            </div>
-                            <div class="navbar thumb_desc">
-                                <span class="navbar-brand">
-                                    <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
-                                    <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
+                                <span class="nav-item">
+                                    <span class="mr-1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zM8.999 17H7v-1.999l5.53-5.522l1.999 1.999L8.999 17zm6.473-6.465l-1.999-1.999l1.524-1.523l1.999 1.999l-1.524 1.523z" fill="#626262"/></svg></a></span>
+                                    <span><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z" fill="#626262"/></svg></a></span>
                                 </span>
                             </div>
                         </div>
@@ -206,24 +187,9 @@
                                     <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
                                     <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
                                 </span>
-                            </div>
-                        </div>
-                        <!-- one show -->
-
-                        <!-- one show -->
-                        <div class="grid-item bx-shadow-lg fadein">
-                            <div class="thumbnail_wrappper pointer-cursor">
-                                <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
-                                </div>
-                                <div class="thumb_title">
-                                    <span class="fcwhitesmoke">Master Cooking</span>
-                                </div>
-                            </div>
-                            <div class="navbar thumb_desc">
-                                <span class="navbar-brand">
-                                    <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
-                                    <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
+                                <span class="nav-item">
+                                    <span class="mr-1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zM8.999 17H7v-1.999l5.53-5.522l1.999 1.999L8.999 17zm6.473-6.465l-1.999-1.999l1.524-1.523l1.999 1.999l-1.524 1.523z" fill="#626262"/></svg></a></span>
+                                    <span><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z" fill="#626262"/></svg></a></span>
                                 </span>
                             </div>
                         </div>
@@ -244,28 +210,14 @@
                                     <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
                                     <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
                                 </span>
-                            </div>
-                        </div>
-                        <!-- one show -->
-
-                        <!-- one show -->
-                        <div class="grid-item bx-shadow-lg fadein">
-                            <div class="thumbnail_wrappper pointer-cursor">
-                                <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
-                                </div>
-                                <div class="thumb_title">
-                                    <span class="fcwhitesmoke">Master Cooking</span>
-                                </div>
-                            </div>
-                            <div class="navbar thumb_desc">
-                                <span class="navbar-brand">
-                                    <span class="thumb_desc_img rounded-circle mr-1"><a href="#"><img class="thumb_desc_img_image rounded-circle" src="img/p1.jpg" alt=""></a></span>
-                                    <span class="fs16"><a class="user-nm" href="#">Hanif Abdillah</a></span>
+                                <span class="nav-item">
+                                    <span class="mr-1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zM8.999 17H7v-1.999l5.53-5.522l1.999 1.999L8.999 17zm6.473-6.465l-1.999-1.999l1.524-1.523l1.999 1.999l-1.524 1.523z" fill="#626262"/></svg></a></span>
+                                    <span><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z" fill="#626262"/></svg></a></span>
                                 </span>
                             </div>
                         </div>
                         <!-- one show -->
+
                     </div>
                     <!-- load more -->
                     <center>

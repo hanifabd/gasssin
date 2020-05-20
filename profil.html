@@ -18,6 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/filter.js"></script>
     <script src="js/trigger.js"></script>
+    <script src="js/modal-dialog.js"></script>
     <script>
         // menampilkan 4 grid-item dulu
         // kemudian setelah klik div dengan id="loadmore" akan menampilkan 4 item lainnya
@@ -160,7 +161,7 @@
                         <div class="grid-item bx-shadow-lg fadein">
                             <div class="thumbnail_wrappper pointer-cursor">
                                 <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
+                                    <span onclick="showDialog();"><img class="thumb_img" src="img/thumb_sample.png" alt=""></span>
                                 </div>
                                 <div class="thumb_title">
                                     <span class="fcwhitesmoke">Master Cooking</span>
@@ -179,7 +180,7 @@
                         <div class="grid-item bx-shadow-lg fadein">
                             <div class="thumbnail_wrappper pointer-cursor">
                                 <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
+                                    <span onclick="showDialog();"><img class="thumb_img" src="img/thumb_sample.png" alt=""></span>
                                 </div>
                                 <div class="thumb_title">
                                     <span class="fcwhitesmoke">Master Cooking</span>
@@ -198,7 +199,7 @@
                         <div class="grid-item bx-shadow-lg fadein">
                             <div class="thumbnail_wrappper pointer-cursor">
                                 <div class="thumbnail">
-                                    <img class="thumb_img" src="img/thumb_sample.png" alt="">
+                                    <span onclick="showDialog();"><img class="thumb_img" src="img/thumb_sample.png" alt=""></span>
                                 </div>
                                 <div class="thumb_title">
                                     <span class="fcwhitesmoke">Master Cooking</span>
@@ -287,6 +288,65 @@
                 </div>
             </center>
         </div>
+
+        <!-- detil karya -->
+        <section id="view-shot" class="overlay" style="display: none; visibility: hidden;">
+            <nav class="navbar close-fixed">
+                <span class="navbar-brand">
+                    <span class="navbar-brand pointer-cursor" onclick="closeDialog()"><img src="img/imgclose.png" alt=""></span>
+                </span>
+            </nav>  
+            <div class="view-wrapper fadeindown">
+                <div class="navpd-overlay">
+                    <div class="row my-auto mb-20">
+                        <div class="m-2 p-2">
+                            <span class="rounded-circle"><img class="img-profile-overlay rounded-circle" src="img/p1.jpg" alt=""></span>
+                        </div>
+                        <div class="m-2 p-2 ml12">
+                            <span class="fs24 fcbrown"><b>Master Cooking</b></span><br>
+                            <span class="fcgrey">by </span><a class="user-nm-l" href="#">Hanif Yuli Abdillah P</a>
+                        </div>
+                    </div>
+                    <div class="my-auto mb-20">
+                        <div>
+                            <span class="rounded">
+                                <img class="img-shots-overlay rounded" src="img/thumb_sample.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-20 mt-12">
+                        <span>
+                            <span class="center-hz">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="24" height="24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M3 18h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zM4 4h16a2 2 0 0 1 2 2v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a2 2 0 0 1 2-2z" fill="#626262"/></svg>
+                            </span>
+                            <span class="fs14 ml6 center-hz">Android</span>
+                        </span>
+                        <span class="ml12">
+                            <span class="center-hz">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="24" height="24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="#626262"/><path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="#626262"/><path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="#626262"/></svg>
+                            </span>
+                            <span class="fs14 ml6 center-hz">20 Mei 2020</span>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="mb-20 mt-12">
+                        Hello, this is my second shot for Paperpillar team about design exploration for an old project. I combine the experimental layout with the use of bold illustration. The orange color is utilized to give a tasty food feels, while the soft pink and brown color represents dessert.<br>
+                        <br>
+                        I hope you guys like it!<br>
+                        Have a great day, thanks!<br>
+                        -----------------------<br>
+                        Interested to work with us?<br> 
+                        Shoot your business inquiry to hello@paperpillar.com
+                    </div>
+                    <hr>
+                    <div class="mb-20 mt-12">
+                        <div class="mb-12">Suka dengan apa yang kamu lihat ?</div>
+                        <div class="dst-signin-show pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="mailto: example@gmail.com">Kontak Creator</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- detil karya -->
     </div>
 </body>
 </html>

@@ -75,7 +75,7 @@
                             <hr>
                             <center>
                             <div>
-                                <span class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bgbrown rounded text-decoration-none" href="upload.html">Upload</a></span>
+                                <span class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bgbrown rounded text-decoration-none" href="upload.php">Upload</a></span>
                             </div>
                             </center>
                         </div>

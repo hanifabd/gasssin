@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,9 +41,8 @@
                     <span class="dst-signin fclbrown">Welcome, </span>
                     <span class="dst-signin fcwhitesmoke mr-1">
                     <?php
-                        session_start();
                         echo "".$_SESSION['nama_mahasiswa'];
-                        ?>
+                    ?>
                     </span>
                     <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
                 </div>
@@ -52,10 +54,10 @@
                         <div class="w-100 bglbrown mt-12 pd16 rounded bx-shadow-lg">
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="profil.php">Profil Anda</a></div>
                             <hr>
-                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="edit-profile.html">Edit Profil</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="edit-profile.php">Edit Profil</a></div>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Portfolio</a></div>
                             <hr>
-                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="login.php">Keluar</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="logout.php">Keluar</a></div>
                             <hr>
                             <center>
                             <div>
@@ -87,25 +89,27 @@
                             <span id="menu_22" class="text-hv fs20 fclgrey pointer-cursor ml12" onclick="divchange(21,22);;">PASSWORD</span>
                         </div>
                     </div>
+                    <form action="updatecek.php" method="POST">
                     <div id="div_21" class="grid-item-edit-profile navpd fadein" style="display: block; visibility: visible;">
                         <div class="mb-20">
                             <span class="rounded-circle mr-2"><img class="img_image_profile_user_edit rounded-circle" src="img/p1.jpg" alt=""></span>
                             <span id="edit-avatar" class="pointer-cursor ml12"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none">Upload Foto Profil Baru</a></span>
                             <span id="delete-avatar" class="fcwhitesmoke pointer-cursor ml12"><a class="text-hv fs20 p-2 text-decoration-none">Delete</a></span>
                         </div>
+                        <!-- <input type="hidden" name="id_mahasiswa" value="<?php echo $_SESSION['id_mahasiswa'] ?>"> -->
                         <div class="mb-20">
                             <div class="fcwhitesmoke fs20 mb8">Nama<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="username_mahasiswa" id="username_mahasiswa" value=""></div>
+                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="nama_mahasiswa" id="name_mahasiswa" value="<?php if($_SESSION['nama_mahasiswa'] != null) { echo $_SESSION['nama_mahasiswa']; }?>" required></div>
                             <div class="fs16 fclgrey">Kamu akan bersinar dengan nama asli anda, jadi mereka akan tahu siapa anda yang sebenarnya</div>
                         </div>
                         <div class="mb-20">
                             <div class="fcwhitesmoke fs20 mb8">Username<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="nama_mahasiswa" id="nama_maahsiswa" value=""></div>
+                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="username_mahasiswa" id="username_maahsiswa" value="<?php if($_SESSION['username_mahasiswa'] != null) { echo $_SESSION['username_mahasiswa']; }?>"></div>
                         </div>
                         <div class="mb-48">
                             <div class="fcwhitesmoke fs20 mb8">Biografi</div>
                             <div>
-                                <textarea class="stform stform-search pd8 fs16 w-100" name="biografi_mahasiswa" id="biografi_mahasiswa" maxlength="1024"></textarea>
+                                <textarea class="stform stform-search pd8 fs16 w-100" name="biografi_mahasiswa" id="biografi_mahasiswa" maxlength="1024"><?php if($_SESSION['biografi_mahasiswa'] != null) { echo $_SESSION['biografi_mahasiswa']; }?></textarea>
                                 <div class="fs16 fclgrey">Deskripsi singkat untuk profil anda</div>
                             </div>
                         </div>
@@ -115,29 +119,33 @@
                         </div>
                         <div class="mb-48">
                             <div class="fcwhitesmoke fs20 mb8">Email<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="email" name="email_mahasiswa" id="email_mahasiswa" value=""></div>
+                            <div><input class="stform stform-search pd8 fs16 w-100" type="email" name="email_mahasiswa" id="email_mahasiswa" value="<?php if($_SESSION['email_mahasiswa'] != null) { echo $_SESSION['email_mahasiswa']; }?>" required></div>
                         </div>
                         <div class="mb-48">
-                            <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" >Perbarui</a></span>
+                            <!-- <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" >Perbarui</a></span> -->
+                            <input class="button-main mt-48 bglbrown fcbrown bx-shadow-lg" type="submit" value="Perbarui">
                         </div>
                     </div>
-
+                    </form>
+                    <form action="updatepassword.php" method="POST">
                     <div id="div_22" class="grid-item-edit-profile navpd fadein" style="display: none; visibility: hidden;">
                         <div class="mb-20">
                             <div class="fcwhitesmoke fs20 mb8">Password Lama<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="password" name="" id=""></div>
+                            <div><input class="stform stform-search pd8 fs16 w-100" type="password" name="pass_lama" id="" required></div>
                         </div>
                         <div class="mb-20">
                             <div class="fcwhitesmoke fs20 mb8">Password<span class="fclbrown">*</span></div>
                             <div>
-                                <input class="stform stform-search pd8 fs16 w-100" type="password" minlength="6" name="" id="" value="">
+                                <input class="stform stform-search pd8 fs16 w-100" type="password" minlength="6" name="pass_baru" id="" value="" required>
                             </div>
                             <div class="fs16 fclgrey">minimal 6 karakter</div>
                         </div>
                         <div class="mb-48">
-                            <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none">Perbarui</a></span>
+                            <!-- <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none">Perbarui</a></span> -->
+                            <input class="button-main mt-48 bglbrown fcbrown bx-shadow-lg" type="submit" value="Perbarui Password">
                         </div>
                     </div>
+                    </form>
                 </div>
                 <hr>
                 <!-- footer -->

@@ -14,9 +14,13 @@ $sql->execute();
 $data = $sql->fetch();
  
 if(! empty($data)){
+    $_SESSION['id_mahasiswa'] = $data['id_mahasiswa'];
     $_SESSION['email_mahasiswa'] = $data['email_mahasiswa'];
+    $_SESSION['password_mahasiswa'] = $data['password_mahasiswa'];
     $_SESSION['nama_mahasiswa']= $data['nama_mahasiswa'];
-	header("location:gallery.php");
+    $_SESSION['username_mahasiswa']= $data['username_mahasiswa'];
+    $_SESSION['biografi_mahasiswa']= $data['biografi_mahasiswa'];
+	header("location:index.php");
 }else{
 	header("location:login.php?pesan=gagal");	
 }

@@ -68,14 +68,14 @@
                         <div class="w-100 bglbrown mt-12 pd16 rounded bx-shadow-lg">
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="profil.php">Profil Anda</a></div>
                             <hr>
-                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="edit-profile.php">Edit Profil</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="edit-profile.php?id_mahasiswa">Edit Profil</a></div>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Portfolio</a></div>
                             <hr>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="login.php">Keluar</a></div>
                             <hr>
                             <center>
                             <div>
-                                <span class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bgbrown rounded text-decoration-none" href="upload.html">Upload</a></span>
+                                <span class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bgbrown rounded text-decoration-none" href="upload.php">Upload</a></span>
                             </div>
                             </center>
                         </div>

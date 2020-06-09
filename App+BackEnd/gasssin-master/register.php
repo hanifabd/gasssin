@@ -1,27 +1,3 @@
-<?php
-    if(isset($_POST['register']))
-    {
-        $connect=mysqli_connect('localhost','root','','ppl')
-        or die(mysqli_connect_error());
-
-        $nama_mahasiswa=mysqli_real_escape_string($connect,trim($_POST['nama_mahasiswa']));
-        $email_mahasiswa=mysqli_real_escape_string($connect,trim($_POST['email_mahasiswa']));
-        $password_mahasiswa=mysqli_real_escape_string($connect,trim($_POST['password_mahasiswa']));
-        $konfirmasi_password=mysqli_real_escape_string($connect,trim($_POST['konfirmasi_password']));
-
-        if($password_mahasiswa != $konfirmasi_password)
-        {
-            header('location:register.php?konfirmasipassword-failed');
-        }
-        else
-        {
-            $sql='INSERT INTO mahasiswa 
-            values("","'.$nama_mahasiswa.'","","","'.$password_mahasiswa.'","'.$email_mahasiswa.'")';
-            mysqli_query($connect,$sql);
-            header('location:login.php?register-success');
-        }
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +27,7 @@
                 <span class="fclbrown etnic-san">Hi!</span><span class="fcwhitesmoke etnic-san"> Ada yang mau gabung nih</span>
             </div>
             <div class="mt-5">
-                <form action="">
+                <form action="proses_register.php" method="POST">
                     <!-- input -->
                     <input class="stform stform-login bx-shadow-md bglpink fcpurple fadeinleftbig" type="email" name="email_mahasiswa" id="email_mahasiswa" placeholder="Email kamu disini"><br>
                     <input class="stform stform-login bx-shadow-md bglpink fcpurple mt-24 fadeinleftbig" type="text" name="nama_mahasiswa" id="nama_mahasiswa" placeholder="kalo Username nya disini"><br>

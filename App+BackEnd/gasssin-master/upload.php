@@ -33,7 +33,7 @@
             <div class="navpd bgbrown fadeindown">
                 <nav class="navbar w-100">
                     <div class="navbar-brand">
-                        <a href="gallery.html">
+                        <a href="gallery.php">
                             <img class="pointer-cursor icon-chat" src="img/brand pojok.png" alt="">
                         </a>
                     </div>
@@ -53,14 +53,15 @@
                 </center>
                 <section>
                     <div id="dropzone">
-                      <form class="dropzone needsclick" id="upload" action="/web/file/upload/">
+                    <form class="mt-24 dropzone-detil" id="upload2"action="proses_upload.php" method="POST"></form>
+                        <form class="dropzone needsclick" id="upload" action="web/file/upload" method="POST">
                             <div class="dz-message needsclick">
                                 <div>
                                     <span class="iconify" data-icon="octicon-cloud-upload" data-inline="false"></span>
                                 </div> 
                                 <div>
                                     <span class="fs24"><strong>Drag and drop an image</strong></span><br>
-                                    <span>or <span class="fclbrown">Click</span> to choose an image</span><br>
+                                    <span>or <span class="fclbrown" type="file" name="foto_karya">Click</span> to choose an image</span><br>
                                     <span class="fclgrey">(1600x1200 or larger recommended, up to 10 MB)</span>
                                 </div>
                             </div>
@@ -68,15 +69,14 @@
 
                             </div>
                         </form>
-                        <form class="mt-24 dropzone-detil" action="proses_upload.php" method="POST">
                             <div class="mb-20">
                                 <div class="fcbrown fs16 mb8">Judul<span class="fclbrown">*</span></div>
-                                <div><input class="stform stform-search bglgrey pd8 fs16 w-100" type="text" name="judul" id="judul" plac required></div>
+                                <div><input class="stform stform-search bglgrey pd8 fs16 w-100" type="text" name="judul" id="judul" form="upload2" plac required></div>
                             </div>
-                            <?phpdate_default_timezone_set('Asia/Jakarta')?>
+                            <?php date_default_timezone_set('Asia/Jakarta')?>
                             <div class="mb-20">
                                 <div class="fcbrown fs16 mb8">Platform<span class="fclbrown">*</span>
-                                <select class="form-control" name="id_platform" id="id_platform">
+                                <select class="form-control" name="id_platform" id="id_platform" form="upload2">
                                 <option value=""> Pilih Platform</option>
                                 <?php
                                     include 'koneksi.php';
@@ -94,10 +94,11 @@
                             <div class="mb-48">
                                 <div class="fcbrown fs16 mb8">Deskripsi<span class="fclbrown"></span></div>
                                 <div>
-                                    <textarea class="stform stform-search bglgrey pd8 fs16 w-100" name="deskripsi" id=deskripsi"" maxlength="1024" placeholder="Ceritakan bagaimana Proses dan bagaimana anda menyelesaikan productmu..."></textarea>
+                                    <textarea class="stform stform-search bglgrey pd8 fs16 w-100" name="deskripsi" id="deskripsi" form="upload2" maxlength="1024" placeholder="Ceritakan bagaimana Proses dan bagaimana anda menyelesaikan productmu..."></textarea>
                                 </div>
                             </div>
                         <!-- batas -->
+                        
                     </div>
                 </section>                
                 <br/>
@@ -109,13 +110,10 @@
                         <a class="text-hv fs20 fcwhitesmoke" href="gallery.php">Batal</a>
                     </div>
                     <div>
-                        <form action="proses_upload.php" method="post">
-                        <input class="btn bglbrown fs20" type="submit" value="Publikasikan">
-                        </form>
+                        <input class="btn bglbrown fs20" type="submit" value="Publikasikan" form="upload2">
                     </div>
                 </div>
             </footer>
-            </form>
             <!-- footer -->
             </div>
         </div>

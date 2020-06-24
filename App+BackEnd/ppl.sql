@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jun 2020 pada 08.24
+-- Waktu pembuatan: 24 Jun 2020 pada 13.58
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -34,19 +34,17 @@ CREATE TABLE `mahasiswa` (
   `username_mahasiswa` varchar(64) NOT NULL,
   `biografi_mahasiswa` varchar(266) NOT NULL,
   `password_mahasiswa` varchar(64) NOT NULL,
-  `email_mahasiswa` varchar(64) NOT NULL
+  `email_mahasiswa` varchar(64) NOT NULL,
+  `file_pp` varchar(255) DEFAULT 'upload/profile_pict/p1.jpg'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `username_mahasiswa`, `biografi_mahasiswa`, `password_mahasiswa`, `email_mahasiswa`) VALUES
-(3, 'user', '', '', 'userman', 'user@gmail.com'),
-(4, 'contoh', '', '', 'c21', 'contoh@gmail.com'),
-(5, 'dicoba', '', '', 'coba2', 'coba@gmail.com'),
-(6, 'aku', '', '', 'aaa', 'aku@gmail.com'),
-(7, 'toriq', 'T23', 'ra duwe biografi', 'toriq23', 'toriq@gmail.com');
+INSERT INTO `mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `username_mahasiswa`, `biografi_mahasiswa`, `password_mahasiswa`, `email_mahasiswa`, `file_pp`) VALUES
+(7, 'toriq', 'T23', 'ra duwe biografi', 'toriq23', 'toriq@gmail.com', 'p1.jpg'),
+(8, 'real', 'realnaver', 'tak punya biografi', 'realman', 'real@gmail.com', 'udinus.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +55,7 @@ INSERT INTO `mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `username_mahasiswa`,
 CREATE TABLE `project` (
   `id_project` int(10) NOT NULL,
   `id_mahasiswa` int(10) NOT NULL,
-  `foto_karya` varchar(64) NOT NULL,
+  `foto_karya` varchar(255) DEFAULT 'upload/upload_foto_karya',
   `judul` varchar(64) NOT NULL,
   `id_platform` int(10) NOT NULL,
   `deskripsi` varchar(264) NOT NULL,
@@ -72,7 +70,15 @@ CREATE TABLE `project` (
 INSERT INTO `project` (`id_project`, `id_mahasiswa`, `foto_karya`, `judul`, `id_platform`, `deskripsi`, `jumlah_view`, `tgl_upload`) VALUES
 (5, 7, '', 'bu', 5, 'uu', 0, '2009-06-20'),
 (6, 7, '', 'kioi', 3, 'yfyudu', 0, '2009-06-20'),
-(7, 7, '', 'yfifi', 5, 'ugiyy', 0, '2020-06-09');
+(7, 7, '', 'yfifi', 5, 'ugiyy', 0, '2020-06-09'),
+(8, 8, '', 'contoh', 5, 'contoh gambar', 0, '2020-06-09'),
+(9, 8, '', 'udinus', 5, 'gambar udinus', 0, '2020-06-09'),
+(10, 8, '', 'spongebob', 2, 'gambar spongebob', 0, '2020-06-09'),
+(12, 8, '', 'bo', 3, 'kufurfir89t9', 0, '2020-06-09'),
+(15, 8, '', 'bi', 5, 'iyddyi', 0, '2020-06-09'),
+(18, 8, '', 'tyd', 6, 'hccyf', 0, '2020-06-21'),
+(19, 8, '', 'ijiojiojio', 5, 'bbuibbiu', 0, '2020-06-21'),
+(20, 8, '', 'aaa', 2, 'vyccyau', 0, '2020-06-21');
 
 -- --------------------------------------------------------
 
@@ -127,13 +133,13 @@ ALTER TABLE `tabel_platform`
 -- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id_mahasiswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_mahasiswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `project`
 --
 ALTER TABLE `project`
-  MODIFY `id_project` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_project` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_platform`

@@ -23,7 +23,7 @@
     <script src="js/trigger.js"></script>
     <!-- bootstrap js -->
 
-    <title>Edit Profil | Gasssin</title>
+    <title>Edit Portofolio | Gasssin</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 </head>
 <body>
@@ -77,75 +77,61 @@
                                 <?php
                                     echo "".$_SESSION['nama_mahasiswa'];
                                 ?>
-                                </span><span> / Edit Profil</span>
+                                </span><span> / Edit Portofolio</span>
                             </div>
                             <div class="fs16 fcwhitesmoke">
                                 <span>Siapkan profil gasssinmu untuk memulai perjalanan yang luar biasa</span>
                             </div>
-                        </div>
-                        <div class="w-100 mt-24">
-                            <span id="menu_21" class="text-hv fs20 fclgrey pointer-cursor active" onclick="divchange(22,21);">PROFIL PUBLIK</span>
-                            <span class="fclbrown ml12"> | </span>
-                            <span id="menu_22" class="text-hv fs20 fclgrey pointer-cursor ml12" onclick="divchange(21,22);;">PASSWORD</span>
+                            <div class="w-100 mt-24">
+                            </div>
                         </div>
                     </div>
-                    <form action="updatecek.php" method="POST" enctype="multipart/form-data">
+                    <form enctype="multipart/form-data">
                     <div id="div_21" class="grid-item-edit-profile navpd fadein" style="display: block; visibility: visible;">
                         <div class="mb-20">
-                            <span class="rounded-circle mr-2"><img class="img_image_profile_user_edit rounded-circle" src="<?php echo "upload/profile_pict/".$_SESSION['file_pp']; ?>" alt=""></span>
-                            <!-- <span id="edit-avatar" class="pointer-cursor ml12"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none">Upload Foto Profil Baru</a></span> -->
-                            <input class="fcwhitesmoke" type="file" name="profilepicture" id="">
-                            <!-- <span id="delete-avatar" class="fcwhitesmoke pointer-cursor"><a class="text-hv fs20 p-2 text-decoration-none">Delete</a></span> -->
-                        </div>
-                        <div class="mb-20">
-                            
-                            <div class="fcwhitesmoke fs20 mb8">Nama<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="nama_mahasiswa" id="name_mahasiswa" value="<?php if($_SESSION['nama_mahasiswa'] != null) { echo $_SESSION['nama_mahasiswa']; }?>" required></div>
-                            <div class="fs16 fclgrey">Kamu akan bersinar dengan nama asli anda, jadi mereka akan tahu siapa anda yang sebenarnya</div>
-                        </div>
-                        <div class="mb-20">
-                            <div class="fcwhitesmoke fs20 mb8">Username<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="text" name="username_mahasiswa" id="username_maahsiswa" value="<?php if($_SESSION['username_mahasiswa'] != null) { echo $_SESSION['username_mahasiswa']; }?>"></div>
-                        </div>
-                        <div class="mb-48">
-                            <div class="fcwhitesmoke fs20 mb8">Biografi</div>
-                            <div>
-                                <textarea class="stform stform-search pd8 fs16 w-100" name="biografi_mahasiswa" id="biografi_mahasiswa" maxlength="1024"><?php if($_SESSION['biografi_mahasiswa'] != null) { echo $_SESSION['biografi_mahasiswa']; }?></textarea>
-                                <div class="fs16 fclgrey">Deskripsi singkat untuk profil anda</div>
+                            <div class="fcwhitesmoke fs20 mb8">
+                            <table>
+                                <thead>
+                                    <tr>
+                                    <th>ID project</th>
+                                    <th>ID mahasiswa</th>
+                                    <th>Foto Karya</th>
+                                    <th>Judul</th>
+                                    <th>ID platform</th>
+                                    <th>Deskripsi</th>
+                                    <th>Jumlah View</th>
+                                    <th>Tanggal</th>
+                                    </tr>
+                                </thead>
+                                <?php include('koneksi.php');?>
+                                <?php
+                                $id_mahasiswa=$_SESSION['id_mahasiswa'];
+                                    $sql="SELECT * FROM project WHERE id_mahasiswa=$id_mahasiswa";
+                                    
+                                    $query=mysqli_query($conn,$sql);
+                                    while($row=mysqli_fetch_array($query) )
+                                    {
+                                        ?>
+                                        <tbody>
+                                            <tr>
+                                                <td><?php echo $row['id_project'] ?></td>
+                                                <td><?php echo $row['id_mahasiswa'] ?></td>
+                                                <td><?php echo $row['foto_karya'] ?></td>
+                                                <td><?php echo $row['judul'] ?></td>
+                                                <td><?php echo $row['id_platform'] ?></td>
+                                                <td><?php echo $row['deskripsi'] ?></td>
+                                                <td><?php echo $row['jumlah_view'] ?></td>
+                                                <td><?php echo $row['tgl_upload'] ?></td>
+                                                <td>
+                                                    <?php echo "<a href= 'proses_edit_port.php?id_project=".$row['id_project']." ' class='btn btn-3d btn-primary'>Edit</a>";?>   
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    <?php } ?>
+                            </table>
+                            </div>
                             </div>
                         </div>
-                        <div class="mb-20">
-                            <div class="fcwhitesmoke fs20 mb8">Pengaturan Akun</div>
-                            <hr>
-                        </div>
-                        <div class="mb-48">
-                            <div class="fcwhitesmoke fs20 mb8">Email<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="email" name="email_mahasiswa" id="email_mahasiswa" value="<?php if($_SESSION['email_mahasiswa'] != null) { echo $_SESSION['email_mahasiswa']; }?>" required></div>
-                        </div>
-                        <div class="mb-48">
-                            <!-- <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" >Perbarui</a></span> -->
-                            <input class="button-main mt-48 bglbrown fcbrown bx-shadow-lg" type="submit" name="upload" value="Perbarui">
-                        </div>
-                    </div>
-                    </form>
-                    <form action="updatepassword.php" method="POST">
-                    <div id="div_22" class="grid-item-edit-profile navpd fadein" style="display: none; visibility: hidden;">
-                        <div class="mb-20">
-                            <div class="fcwhitesmoke fs20 mb8">Password Lama<span class="fclbrown">*</span></div>
-                            <div><input class="stform stform-search pd8 fs16 w-100" type="password" name="pass_lama" id="" required></div>
-                        </div>
-                        <div class="mb-20">
-                            <div class="fcwhitesmoke fs20 mb8">Password<span class="fclbrown">*</span></div>
-                            <div>
-                                <input class="stform stform-search pd8 fs16 w-100" type="password" minlength="6" name="pass_baru" id="" value="" required>
-                            </div>
-                            <div class="fs16 fclgrey">minimal 6 karakter</div>
-                        </div>
-                        <div class="mb-48">
-                            <!-- <span id="edit-profil" class="pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none">Perbarui</a></span> -->
-                            <input class="button-main mt-48 bglbrown fcbrown bx-shadow-lg" type="submit" value="Perbarui Password">
-                        </div>
-                    </div>
                     </form>
                 </div>
                 <hr>
@@ -214,5 +200,7 @@
             </center>
         </div>
     </div>
+    
 </body>
+
 </html>

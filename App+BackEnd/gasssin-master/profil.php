@@ -30,7 +30,7 @@
         });
     </script>
     <!-- bootstrap js -->
-    <title>Hanif Yuli Abdillah P | Gasssin</title>
+    <title>Profil | Gasssin</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 </head>
 <body>
@@ -58,7 +58,7 @@
                         echo "".$_SESSION['nama_mahasiswa'];
                         ?>
                     </span>
-                    <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="img/p1.jpg" alt=""></span>
+                    <span class="thumb_desc_img rounded-circle mr-2"><img class="img_image_profile rounded-circle" src="<?php echo "upload/profile_pict/".$_SESSION['file_pp']; ?>" alt=""></span>
                 </div>
                 <!-- sudah masuk -->
             </nav>  
@@ -69,7 +69,7 @@
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="profil.php">Profil Anda</a></div>
                             <hr>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="edit-profile.php">Edit Profil</a></div>
-                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="#">Edit Portfolio</a></div>
+                            <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="editportofolio.php">Edit Portfolio</a></div>
                             <hr>
                             <div><a class="profile-opt fcwhitesmoke text-decoration-none" href="login.php">Keluar</a></div>
                             <hr>

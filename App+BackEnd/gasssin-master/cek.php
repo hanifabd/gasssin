@@ -20,6 +20,7 @@ if(! empty($data)){
     $_SESSION['nama_mahasiswa']= $data['nama_mahasiswa'];
     $_SESSION['username_mahasiswa']= $data['username_mahasiswa'];
     $_SESSION['biografi_mahasiswa']= $data['biografi_mahasiswa'];
+    $_SESSION['file_pp'] = $data['file_pp'];
 	header("location:index.php");
 }else{
 	header("location:login.php?pesan=gagal");	

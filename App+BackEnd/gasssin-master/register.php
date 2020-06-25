@@ -39,7 +39,7 @@
                     <!-- <a href="#" class="button-main mt-48 bglbrown fcwhitesmoke bx-shadow-lg ml-2">masuk</a> -->
                     <div class="mt-24 fcwhitesmoke">
                         <span>sudah punya akun ? </span><a href="login.php" class="fclbrown">masuk</a><br>
-                        <span>atau</span><br>
+                        <span>atau</span>
                         <span><a class="fclbrown" href="gallery.php">Kembali Saja</a></span>
                     </div>
                     <!-- button -->

@@ -55,7 +55,7 @@ INSERT INTO `mahasiswa` (`id_mahasiswa`, `nama_mahasiswa`, `username_mahasiswa`,
 CREATE TABLE `project` (
   `id_project` int(10) NOT NULL,
   `id_mahasiswa` int(10) NOT NULL,
-  `foto_karya` varchar(255) DEFAULT 'upload/upload_foto_karya',
+  `foto_karya` varchar(255) DEFAULT 'upload/upload_foto_karya/p1.jpg',
   `judul` varchar(64) NOT NULL,
   `id_platform` int(10) NOT NULL,
   `deskripsi` varchar(264) NOT NULL,
@@ -68,17 +68,7 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id_project`, `id_mahasiswa`, `foto_karya`, `judul`, `id_platform`, `deskripsi`, `jumlah_view`, `tgl_upload`) VALUES
-(5, 7, '', 'bu', 5, 'uu', 0, '2009-06-20'),
-(6, 7, '', 'kioi', 3, 'yfyudu', 0, '2009-06-20'),
-(7, 7, '', 'yfifi', 5, 'ugiyy', 0, '2020-06-09'),
-(8, 8, '', 'contoh', 5, 'contoh gambar', 0, '2020-06-09'),
-(9, 8, '', 'udinus', 5, 'gambar udinus', 0, '2020-06-09'),
-(10, 8, '', 'spongebob', 2, 'gambar spongebob', 0, '2020-06-09'),
-(12, 8, '', 'bo', 3, 'kufurfir89t9', 0, '2020-06-09'),
-(15, 8, '', 'bi', 5, 'iyddyi', 0, '2020-06-09'),
-(18, 8, '', 'tyd', 6, 'hccyf', 0, '2020-06-21'),
-(19, 8, '', 'ijiojiojio', 5, 'bbuibbiu', 0, '2020-06-21'),
-(20, 8, '', 'aaa', 2, 'vyccyau', 0, '2020-06-21');
+(23, 8, 'udinus.jpg', 'gambar', 5, 'contoh gambar', 0, '2020-06-24');
 
 -- --------------------------------------------------------
 
@@ -139,7 +129,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT untuk tabel `project`
 --
 ALTER TABLE `project`
-  MODIFY `id_project` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_project` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_platform`

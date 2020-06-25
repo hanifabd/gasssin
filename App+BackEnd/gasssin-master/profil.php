@@ -222,12 +222,13 @@
                             $platform = $row3['nama_platform'];
                             $tgl = $row2['tgl_upload'];
                             $desc = $row2['deskripsi'];
+                            $mail = $row['email_mahasiswa'];
     
                         ?>
                         <div class="grid-item bx-shadow-lg fadein">
                             <div class="thumbnail_wrappper pointer-cursor">
                                 <div class="thumbnail">
-                                    <span onclick="<?php echo "showDialog('$profil','$judul','$nama','$gambar','$platform','$tgl','$desc');" ?>">
+                                    <span onclick="<?php echo "showDialog('$profil','$judul','$nama','$gambar','$platform','$tgl','$desc','$mail');" ?>">
                                     <img class="thumb_img" src="<?php echo "upload/upload_foto_karya/".$row2['foto_karya'] ?>" alt="">
                                     </span>
                                 </div>
@@ -381,7 +382,7 @@
                     <hr>
                     <div class="mb-20 mt-12">
                         <div class="mb-12">Suka dengan apa yang kamu lihat ?</div>
-                        <div class="dst-signin-show pointer-cursor"><a class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="mailto: example@gmail.com">Kontak Creator</a></div>
+                        <div class="dst-signin-show pointer-cursor"><a id="mailto" class="btn-hv fs20 fcwhitesmoke p-2 bglbrown rounded text-decoration-none" href="#">Kontak Creator</a></div>
                     </div>
                 </div>
             </div>

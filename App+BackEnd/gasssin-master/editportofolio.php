@@ -80,7 +80,7 @@
                                 </span><span> / Edit Portofolio</span>
                             </div>
                             <div class="fs16 fcwhitesmoke">
-                                <span>Siapkan profil gasssinmu untuk memulai perjalanan yang luar biasa</span>
+                                <span>Kamu bisa mengedit hasil karyamu</span>
                             </div>
                             <div class="w-100 mt-24">
                             </div>
@@ -93,14 +93,10 @@
                             <table>
                                 <thead>
                                     <tr>
-                                    <th>ID project</th>
-                                    <th>ID mahasiswa</th>
                                     <th>Foto Karya</th>
                                     <th>Judul</th>
                                     <th>ID platform</th>
                                     <th>Deskripsi</th>
-                                    <th>Jumlah View</th>
-                                    <th>Tanggal</th>
                                     </tr>
                                 </thead>
                                 <?php include('koneksi.php');?>
@@ -114,14 +110,10 @@
                                         ?>
                                         <tbody>
                                             <tr>
-                                                <td><?php echo $row['id_project'] ?></td>
-                                                <td><?php echo $row['id_mahasiswa'] ?></td>
                                                 <td><?php echo $row['foto_karya'] ?></td>
                                                 <td><?php echo $row['judul'] ?></td>
                                                 <td><?php echo $row['id_platform'] ?></td>
                                                 <td><?php echo $row['deskripsi'] ?></td>
-                                                <td><?php echo $row['jumlah_view'] ?></td>
-                                                <td><?php echo $row['tgl_upload'] ?></td>
                                                 <td>
                                                     <?php echo "<a href= 'proses_edit_port.php?id_project=".$row['id_project']." ' class='btn btn-3d btn-primary'>Edit</a>";?>   
                                                 </td>

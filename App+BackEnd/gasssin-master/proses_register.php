@@ -12,8 +12,8 @@
         }
         else
         {
-            $sql="INSERT INTO mahasiswa (nama_mahasiswa, username_mahasiswa, biografi_mahasiswa, password_mahasiswa, email_mahasiswa)
-            values('$nama_mahasiswa','','','$password_mahasiswa','$email_mahasiswa')";
+            $sql="INSERT INTO mahasiswa (nama_mahasiswa, username_mahasiswa, biografi_mahasiswa, password_mahasiswa, email_mahasiswa, file_pp)
+            values('$nama_mahasiswa','','','$password_mahasiswa','$email_mahasiswa','')";
             mysqli_query($conn,$sql);
             header('location:login.php?register-success');
         }

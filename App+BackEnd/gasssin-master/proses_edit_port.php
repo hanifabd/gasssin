@@ -53,18 +53,26 @@
                 </center>
                 <section>
                     <div id="dropzone">
-                        <form class="mt-24 dropzone-detil" action="proses_upload.php" method="POST" enctype="multipart/form-data">
+                    <?php 
+                        include('koneksi.php');
+
+                        $id_project = $_GET['id_project'];
+                        $sql="SELECT * FROM project WHERE id_project = '$id_project' ";
+                        $query=mysqli_query($conn,$sql);
+                        $row=mysqli_fetch_array($query);
+                    ?>
+                        <form class="mt-24 dropzone-detil" action="proses_edit_port2.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-20">
-                                <div class="fcbrown fs16 mb8">Foto Karya<span class="fclbrown">* </span><input class="fcwhitesmoke" type="file" name="foto_karya" id="" required></div>                                
+                                <div class="fcbrown fs16 mb8">Foto Karya<span class="fclbrown">* </span><input class="fcwhitesmoke" type="file" name="foto_karya" id="" value="<?php echo $row['foto_karya']?>" required></div>                                
                             </div>
                             <div class="mb-20">
                                 <div class="fcbrown fs16 mb8">Judul<span class="fclbrown">*</span></div>
-                                <div><input class="stform stform-search bglgrey pd8 fs16 w-100" type="text" name="judul" id="" placeholder="Judul Karyamu.." required></div>
+                                <div><input class="stform stform-search bglgrey pd8 fs16 w-100" type="text" name="judul" id="" value="<?php echo $row['judul']?>" placeholder="Judul Karyamu.." required></div>
                             </div>
                             <?php date_default_timezone_set('Asia/Jakarta')?>
                             <div class="mb-20">
                                 <div class="fcbrown fs16 mb8">Platform<span class="fclbrown">*</span></div>
-                                <select class="form-control" name="id_platform" id="id_platform">
+                                <select class="form-control" name="id_platform" id="id_platform" value="<?php echo $row['id_platform']?>">
                                         <option value=""> Pilih Platform</option>
                                         <?php
                                             include 'koneksi.php';
@@ -81,7 +89,7 @@
                             <div class="mb-48">
                                 <div class="fcbrown fs16 mb8">Deskripsi<span class="fclbrown"></span></div>
                                 <div>
-                                    <textarea class="stform stform-search bglgrey pd8 fs16 w-100" name="deskripsi" id="" maxlength="1024" placeholder="Ceritakan bagaimana Proses dan bagaimana anda menyelesaikan productmu..."></textarea>
+                                    <textarea class="stform stform-search bglgrey pd8 fs16 w-100" name="deskripsi" id="" value="<?php echo $row['deskripsi']?>"maxlength="1024" placeholder="Ceritakan bagaimana Proses dan bagaimana anda menyelesaikan productmu..."></textarea>
                                 </div>
                             </div>
                         <!-- batas -->

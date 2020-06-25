@@ -160,6 +160,23 @@
                         <!-- one show -->
                         <div class="grid-item bx-shadow-lg pointer-cursor fadein">
                             <div class="thumbnail_wrappper">
+                            <table>
+                            <?php include('koneksi.php');?>
+                                <?php
+                                    $sql="SELECT * FROM project";
+                                    
+                                    $query=mysqli_query($conn,$sql);
+                                    while($row=mysqli_fetch_array($query) )
+                                    {
+                                        ?>
+                                        <tbody>
+                                            <tr>
+                                                <td><?php echo $row['foto_karya'] ?></td>
+                                                <td><?php echo $row['judul'] ?></td>
+                                            </tr>
+                                        </tbody>
+                                    <?php } ?>
+                            </table>
                                 <div class="thumbnail">
                                     <img class="thumb_img" src="img/thumb_sample.png" alt="">
                                 </div>
